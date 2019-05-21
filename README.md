@@ -41,4 +41,5 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-kubectl create deployment jobsearch --image=tutorial/jobsearch
+
+URL - `https://us-south.functions.cloud.ibm.com/api/v1/web/dcf60ca3-b95d-4f3f-8aaa-5a825bfdfabd/hello-world/helloworld.json?keywords=any`
