@@ -14,6 +14,7 @@ It's a project that shows users a list of jobs.
 To Run, Get a google api key by following the instructions below: 
 
 1. Change your url to your functions web actions url in /src/app/service/apicalls.service.ts
+2. Install the angular CLI ... `npm install -g @angular/cli`
 2. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 3. To run using docker-compose:
 4. Run `docker-compose build`
