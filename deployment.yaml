@@ -1,0 +1,41 @@
+#
+# Licensed Materials - Property of IBM
+# 6949-68N
+#
+# © Copyright IBM Corp. 2018 All Rights Reserved
+#
+
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  # This name uniquely identifies the Deployment
+  name: jobsearch
+  namespace: default
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        # Label is used as selector in the service.
+        app: jobsearch
+    spec:
+      containers:
+      - name: jobsearch
+        # Pulls the default objectstorage image: $DOCKER_REG_FOR_SERVICES/ from Docker Hub
+        image: jobsearch
+        imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jobsearch
+  namespace: default
+  labels:
+    app: jobsearch
+spec:
+  ports:
+  - port: 8080
+    targetPort: 8080
+  type: LoadBalancer
+  selector:
+    app: jobsearch
