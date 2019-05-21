@@ -9,46 +9,15 @@ import {Job} from '../model/job';
 @Injectable()
 export class ApicallsService {
 
-  careerjet_url = '/jobs';
-  google_api_key = 'AIzaSyBBD33M3yLgnWW4CWMKWKdG7kL_ZDLEpVI';
-  places_url = '/googleplaces';
-  matrix_url = '/distancematrix';
+  url =
+    'https://us-south.functions.cloud.ibm.com/api/v1/web/dcf60ca3-b95d-4f3f-8aaa-5a825bfdfabd/hello-world/helloworld.json?keywords=';
 
   constructor(public http: Http) {}
   // make a http call to google's distance  matrix API and return and return an observable
-  getDistance(address1, address2): Observable<any> {
-    const address_params = new URLSearchParams();
-    address_params.append('origins', address1);
-    address_params.append('destinations', address2);
-    address_params.append('key', this.google_api_key);
-
-    const options = new RequestOptions({
-      search: address_params
-    });
-
-    return this.http.get(this.matrix_url, options).map((response: Response) => response.json());
-  }
-
-  // make a http call to google's places  matrix API and return and return an observable
-  getAddressLatLng(address): Observable<any> {
-    const address_params = new URLSearchParams();
-    address_params.append('query', address);
-    address_params.append('key', this.google_api_key);
-
-    const options = new RequestOptions({
-      search: address_params
-    });
-
-    return this.http.get(this.places_url, options).map((response: Response) => response.json().results);
-  }
 
   // Get careerjet api response
-  getCareerJetResults(search, location): Observable<Job[]> {
-    const form: FormData = new FormData();
-    form.append('keywords', search);
-    form.append('location', location);
-
-    return this.http.post(this.careerjet_url, form).map((response: Response) => <Job[]> response.json().jobs);
+  getJobsResults(search): Observable<Job[]> {
+    return this.http.get(this.url + search).map((response: Response) => <Job[]> response.json().jobs);
   }
 
 }

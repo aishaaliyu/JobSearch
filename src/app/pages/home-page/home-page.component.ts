@@ -14,7 +14,7 @@ export class HomePageComponent implements OnInit {
 
   jobs: Job[] = this.jobset.jobs;
   error_message = '';
-  model = new JobSearch('', '');
+  model = new JobSearch('');
   visible = false;
 
   constructor(public apiProvider: ApicallsService, public router: Router, private jobset: JobSetGetService) {
@@ -22,51 +22,17 @@ export class HomePageComponent implements OnInit {
 
   // Initialize component
   ngOnInit() {
-    if (this.jobset.jobs.length < 1) {
-      this.apiProvider.getCareerJetResults('', 'Halifax, NS')
-        .subscribe((jobs) => {
-            this.jobset.jobs = jobs;
-            this.jobs = this.jobset.jobs;
-          },
-          (error) => {
-            this.error_message = <string>error;
-          });
-    }
-    if (this.jobset.userLocationInfo === null || this.jobset.userLocationInfo === undefined) {
-      this.getUserLocation().then((location) => {
-        this.jobset.userLocationInfo = location;
-      });
-    }
-  }
-
-  // Get user's current location using navigator
-  getUserLocation(): Promise<any> {
-    return new Promise(function (resolve, reject) {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition((result) => {
-          resolve({lat: result.coords.latitude, lng: result.coords.longitude});
-        });
-      } else {
-        resolve({lat: 44.64, lng: -63.57});
-      }
-    });
-  }
-
-  // go to map page
-  goToMap(job: Job) {
-    this.jobset.jobInfo = job;
-    this.router.navigate(['map']);
   }
 
   // On form submit
   formSubmit() {
-    this.apiProvider.getCareerJetResults(this.model.search, this.model.location)
+    this.apiProvider.getJobsResults(this.model.search)
       .subscribe((jobs) => {
           this.jobset.jobs = jobs;
           this.jobs = this.jobset.jobs;
         },
         (error) => {
-          this.error_message = <string>error;
+          this.error_message = error.toString();
         });
   }
 
