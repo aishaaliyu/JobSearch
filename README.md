@@ -6,8 +6,8 @@ It's a project that shows users a list of jobs based on their search.
 
 ## Prototype
 
-![Scheme](./images/WebSearch.gif)
-![Scheme](./images/JobSearch.gif)
+![Scheme](./WebSearch.gif)
+![Scheme](./JobSearch.gif)
 
 ## IBM Cloud Deployment
 See instructions in [IBM Cloud Tutorials](./docs/Tutorials.md)
