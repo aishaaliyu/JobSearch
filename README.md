@@ -26,7 +26,7 @@ To Run:
 ## Full Code 
 The full code as found in the Images without IBM Cloud functions 
 
-  [Full Code with working ](https://bitbucket.org/Abiwax/jobsearch)
+  [Full Code with working Google maps](https://bitbucket.org/Abiwax/jobsearch)
 
 ## Code scaffolding
 
