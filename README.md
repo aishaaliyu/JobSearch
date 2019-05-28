@@ -15,7 +15,7 @@ See instructions in [IBM Cloud Tutorials](./docs/Tutorials.md)
 ## Development server
 
 To Run: 
-1. Change your url to your functions web actions url in /src/app/service/apicalls.service.ts. The web action url can be created by following the tutorial above under IBM Cloud Deployment
+1. Change your url to your functions web actions url in **/src/app/service/apicalls.service.ts**. The web action url can be created by following the tutorial above under IBM Cloud Deployment
 2. Install the angular CLI ... `npm install -g @angular/cli`
 3. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 4. To run using docker-compose:
