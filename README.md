@@ -2,15 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
 
-It's a project that shows users a list of jobs.
+It's a project that shows users a list of jobs based on their search.
 
 ## Prototype
 
-![Scheme](./WebSearch.gif)
-![Scheme](./JobSearch.gif)
+![Scheme](./images/WebSearch.gif)
+![Scheme](./images/JobSearch.gif)
 
 ## IBM Cloud Deployment
-See instructions in [IBM Cloud Tutorials](./Tutorials.md)
+See instructions in [IBM Cloud Tutorials](./docs/Tutorials.md)
 
 ## Development server
 
@@ -25,7 +25,8 @@ To Run:
 
 ## Full Code 
 The full code as found in the Images without IBM Cloud functions 
-https://bitbucket.org/Abiwax/jobsearch
+
+  [Full Code with working ](https://bitbucket.org/Abiwax/jobsearch)
 
 ## Code scaffolding
 
@@ -35,16 +36,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-URL - `https://us-south.functions.cloud.ibm.com/api/v1/web/dcf60ca3-b95d-4f3f-8aaa-5a825bfdfabd/hello-world/helloworld.json?keywords=any`
