@@ -1,14 +1,15 @@
-**IBM Cloud Tutorial**
+# IBM Cloud Tutorial
 
 ## Lab Setup Instructions
 
-1. Setup a GitHub account:** [https://github.com/](https://github.com/)
-2. Set up a new IBM Cloud account**
+1. **Setup a GitHub account:** [https://github.com/](https://github.com/)
+2. **Set up a new IBM Cloud account**
    
    2.1. Open a web browser and navigate to [https://cloud.ibm.com](https://cloud.ibm.com)
    
    2.2. Click **Create an IBM Cloud account**.
- ![Scheme](./images/2.2.png)
+ 
+      ![Scheme](./images/2.2.png)
 
     2.3. Complete the following form with your contact information. Email address, name, country, and a password are required. When you&#39;re done, click **Create Account**.
     
