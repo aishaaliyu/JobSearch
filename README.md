@@ -10,7 +10,7 @@ It's a project that shows users a list of jobs.
 ![Scheme](./JobSearch.gif)
 
 ## IBM Cloud Deployment
-See instructions in [IBM Cloud Tutorials](./IBM Cloud Tutorials.docx)
+See instructions in [IBM Cloud Tutorials](./Tutorials.md)
 
 ## Development server
 
